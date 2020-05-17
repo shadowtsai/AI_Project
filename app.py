@@ -75,7 +75,8 @@ for i, article_url in enumerate(article_url_list):
     result.append({"url":article_url ,
                    "site_category":site_cate,
                    "custom_category":cust_cate,
-                   "title":article_title})
+                   "title":article_title,
+                   "body":str(article_body)})
 
 with open('result.json', 'w') as f:
-        json.dump(result, f, indent=10, sort_keys=True, ensure_ascii=False)
+        json.dump(result, f)
